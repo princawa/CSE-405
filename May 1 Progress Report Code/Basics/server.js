@@ -8,4 +8,4 @@ function onRequest(request, response) { //onRequest function that handles reques
     response.end(); //finished handling response and can be outputted to personal send request.
 }
 
-httpe.createServer(onRequest).listen(8000); //creates server that listens to the port 8000
+http.createServer(onRequest).listen(8000); //creates server that listens to the port 8000
