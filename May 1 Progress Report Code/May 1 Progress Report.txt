@@ -1,0 +1,26 @@
+May 1 Progress Report
+Facundo Holzmeister
+004877115
+
+For the May 1 Progress Report for CSE 405, I tried to learn a bit about Node.js. 
+I've never used Node.js so this was a new experience to me. I created a set of folders named "Basics_x" 
+to show how I programmed my first few applications.
+
+I followed a YouTube channel called Academind https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w to help get me started.
+
+The 1st Basics folder that I created to understand how to use Node.js. In this folder, it has a single javascript
+file named "server." I managed to import an HTTP module in order to create a server that listens to a port 8000. 
+Then I managed to output a string that says "Hello CSE 405 Professor. Facundo Holzmeister was here." to the browser by using a function that handles requests and responses.
+
+The 2nd Basics Folder, includes three javascript files. The main one is app.js which binds a module to log
+a string on a local server. This let me understand how to structure an application with several files 
+and import or export the contents of these files. I experimented with two separate modules.
+Module1.js used a specific function to just call on a string to the console.
+Module2.js used a module that let us export anything. Including a function, variable, etc.
+
+In the third and final basics folder, I used a filesystem module within "app.js" to (which is a module found within
+Node.js that is used to read a file) to render an HTML file as a response. The index.html is read and then outputted
+to the local port 8000 server. It's a simple program to show how to work with HTML files using Node.js.
+
+In the end, I learned a lot about Node.js including how to create my own local server, how to bind modules, and integrate it with HTML.
+It's a great runtime environment for executing Javascript code outside of a browser. Not a bad way to build back-end services or APIs.
