@@ -8,11 +8,10 @@ to show how I programmed my first few applications.
 
 I followed a YouTube channel called Academind https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w to help get me started.
 
-The 1st Basics folder that I created to understand how to use Node.js. In this folder, it has a single javascript
-file named "server." I managed to import an HTTP module in order to create a server that listens to a port 8000. 
+The 1st Basics folder has a single javascript file named "server." I managed to import an HTTP module in order to create a server that listens to a port 8000. 
 Then I managed to output a string that says "Hello CSE 405 Professor. Facundo Holzmeister was here." to the browser by using a function that handles requests and responses.
 
-The 2nd Basics Folder, includes three javascript files. The main one is app.js which binds a module to log
+The 2nd Basics Folder includes three javascript files. The main one is app.js which binds a module to log
 a string on a local server. This let me understand how to structure an application with several files 
 and import or export the contents of these files. I experimented with two separate modules.
 Module1.js used a specific function to just call on a string to the console.
