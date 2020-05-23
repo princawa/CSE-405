@@ -1,0 +1,146 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Link Reference to the Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <title>Smartphone Guides</title>
+</head>
+<body class = "grey ligten-3"> <!--Makes background of the page grey -->
+
+    <!--Creates Navbar -->
+    <nav class="z-depth-0 grey lighten-4"> <!-- "Z-depth-0" makes drop shadow disappear. "Grey lighten-4" = colors navbar -->
+        <div class="nav-wrapper container"> <!-- Centralizes everything in a central column -->
+          <a href="#" class="brand-logo"> <!-- Material class for styling -->
+            <p style="margin-top: 0; color: grey; font-size: 20px;">Firebase Auth. Test by Facundo Holzmeister</p> <!-- Displays Text -->
+            <img src="img/Selfie.JPG" style="width: 85px; margin-top: -80px; margin-left: 400px;"> <!-- This displays my seflie in the navbar -->
+          </a>
+
+          <!-- All of the different menu items-->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <!-- Shown to logged in users -->
+            <li class="logged-in">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a> <!-- Button opens the Account Modal Class -->
+            </li>
+            <li class="logged-in">
+              <a href="#" class="grey-text" id="logout">Logout</a>
+            </li>
+            <li class="logged-in">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a> <!-- Button opens the Create Guide Modal Class -->
+              </li>
+              <!-- Shown to logged out users -->
+            <li class="logged-out">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a> <!-- Button opens the Login Modal Class -->
+              </li>
+            <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a> <!-- Button opens the Signup Modal Class -->
+              </li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- SIGN UP MODAL -->
+    <div id="modal-signup" class="modal"> <!-- Materialize uses this Modal class-->
+        <div class="modal-content">
+        <h4>Sign up</h4><br />
+        <!-- Actual Sign-up form -->
+        <form id="signup-form">
+            <div class="input-field">
+            <input type="email" id="signup-email" required /> <!-- Input field for email -->
+            <label for="signup-email">Email address</label>
+            </div>
+            <!-- Styling from Materialize -->
+            <div class="input-field">
+            <input type="password" id="signup-password" required /> <!-- Input field for password -->
+            <label for="signup-password">Choose password</label>
+            </div>
+            <button class="btn yellow darken-2 z-depth-0">Sign up</button> <!-- Button -->
+        </form>
+        </div>
+    </div>
+
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+        <h4>Login</h4><br />
+         <!-- Actual Login Form -->
+        <form id="login-form">
+            <div class="input-field">
+            <input type="email" id="login-email" required />  <!-- Input field for email -->
+            <label for="login-email">Email address</label>
+            </div>
+            <div class="input-field">
+            <input type="password" id="login-password" required /> <!-- Input field for password -->
+            <label for="login-password">Your password</label>
+            </div>
+            <button class="btn yellow darken-2 z-depth-0">Login</button> <!-- Button -->
+        </form>
+        </div>
+    </div>
+
+      <!-- ACCOUNT MODAL: Used to show the different account data.-->
+  <div id="modal-account" class="modal">
+    <div class="modal-content center-align">
+      <h4>Account details</h4>
+      <div class="account-details"></div> <!-- Account details such as email, name etc.-->
+    </div>
+  </div>
+
+  <!-- CREATE GUIDE MODAL -->
+  <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Guide</h4><br />
+      <form id="create-form">
+          <!-- Two input fields for title, and another the description box-->
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Guide Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Guide Content</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button> <!-- Button -->
+      </form>
+    </div>
+  </div>
+
+  <!-- GUIDE LIST = Actual content on the main page-->
+  <div class="container" style="margin-top: 40px;">
+    <ul class="collapsible z-depth-0 guides" style="border: none;"> <!-- The menus are collapsible and are in a ul class -->
+    
+    </ul>
+  </div>
+  
+
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script> <!-- Core Functionality of Firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script> <!-- Core Functionality for Firebase Authentication -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script> <!-- Core Functionality of Firebase Firestore -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBXGn3CA5WQ7peRxwgNIIKf4R8UXUJ3_xw",
+    authDomain: "lab4-858f3.firebaseapp.com",
+    databaseURL: "https://lab4-858f3.firebaseio.com",
+    projectId: "lab4-858f3",
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //Auth and firestore ref.
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  //updates firestore settings for timestamps to avoid errors.
+  //db.settings({ timestampsInSnapshots: true }); 
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> <!-- Script reference to the javascript library -->
+  <script src="scripts/auth.js"></script> <!-- Everything to do with Authentication -->
+  <script src="scripts/index.js"></script> <!-- Everything to do with page manipulation is done in here. -->
+</body>
+</html>

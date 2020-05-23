@@ -1,0 +1,8 @@
+This is my last progress report for CSE 405 (May 22). After doing a bit of research on how to implement all of the default course assignments, I've decided not to implement another web application. I have already created a web application using Firebase Auth & Firestore in my May 8 Progress Report. The website just allowed a user to created an account, log in and out, see the account details, and also created text-based tutorials that are displayed as drop-down menus for anyone who was logged in.
+
+In this report master folder, I've also included all of my previous runnable example codes for the default 5 topics. This includes Javascript, JSON, Nodejs, Firebase Auth. and Cloud Firestore.
+
+I'm not sure if the web application that I created in my May 8 progress report counts as the web application that you were asking for, but I'm fine with either taking an A or a B for the course. Thank you!
+
+Facundo Holzmeister
+004877115

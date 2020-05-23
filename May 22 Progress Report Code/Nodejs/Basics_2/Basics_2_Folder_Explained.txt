@@ -1,0 +1,6 @@
+In this next folder, it includes three javascript files. The main one is app.js which binds a module to log
+a string on a local server. This let us understand how to structure an application with several files 
+and import or export the contents of these files.
+
+Module1.js used a specific function to just call on a string to the console.
+Module2.js used a module that let us export anything. Including a function, variable, etc.
