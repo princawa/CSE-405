@@ -1,0 +1,7 @@
+I have deployed my web application for CSE 405. It's the same app that I created in my May 8 progress where I used Firebase Authentication & Firestore. 
+
+Here is the link to deploy the web app: https://lab4-858f3.web.app/#
+
+I was having trouble deploying it at first but after two hours of looking at the code, searching the web for answers, etc. I found out that it was one of my chrome extensions messing with my webpage. So if you're having problems viewing the webpage by default, make sure to view the website in incognito mode just in case you have a chrome extension that is affecting it.
+
+I have also included screenshots in my Github repo. of my Firebase platform. You can see my authentications, data for the tutorials, hosting, and overview page.
